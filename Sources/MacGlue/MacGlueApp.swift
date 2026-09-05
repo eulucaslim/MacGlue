@@ -11,6 +11,7 @@ final class MacGlueAppDelegate: NSObject, NSApplicationDelegate {
     private var window: NSWindow?
     private(set) var targetApplication: NSRunningApplication?
     private var lastExternalApplication: NSRunningApplication?
+    private(set) var isEnabled = true
 
     func applicationDidFinishLaunching(_ notification: Notification) {
         monitor = ClipboardMonitor(store: store)
@@ -27,7 +28,11 @@ final class MacGlueAppDelegate: NSObject, NSApplicationDelegate {
             store: store,
             onPaste: { [weak self] in
                 self?.pasteIntoPreviousApplication()
-            }
+            },
+            onControlClick: { [weak self] in
+                self?.toggleEnabled()
+            },
+            isEnabled: isEnabled
         )
             .frame(minWidth: 360, minHeight: 480)
         let hostingView = NSHostingView(rootView: contentView)
@@ -50,6 +55,21 @@ final class MacGlueAppDelegate: NSObject, NSApplicationDelegate {
             self?.toggleHistoryWindow()
         }
         NSApp.activate(ignoringOtherApps: true)
+    }
+
+    func toggleEnabled() {
+        isEnabled.toggle()
+        if isEnabled {
+            monitor?.start()
+            hotKey = GlobalHotKey { [weak self] in
+                self?.toggleHistoryWindow()
+            }
+        } else {
+            monitor?.stop()
+            hotKey?.unregister()
+            hotKey = nil
+            window?.orderOut(nil)
+        }
     }
 
     private func requestAccessibilityPermission() {
@@ -138,7 +158,11 @@ struct MacGlueApp: App {
                 store: appDelegate.store,
                 onPaste: {
                     appDelegate.pasteIntoPreviousApplication()
-                }
+                },
+                onControlClick: {
+                    appDelegate.toggleEnabled()
+                },
+                isEnabled: appDelegate.isEnabled
             )
                 .frame(width: 360, height: 480)
         }
@@ -149,6 +173,8 @@ struct MacGlueApp: App {
 struct ClipboardHistoryView: View {
     @ObservedObject var store: ClipboardStore
     let onPaste: () -> Void
+    let onControlClick: () -> Void
+    let isEnabled: Bool
     @State private var searchText = ""
     @State private var isVisible = false
 
@@ -163,6 +189,22 @@ struct ClipboardHistoryView: View {
 
     var body: some View {
         VStack(spacing: 12) {
+            HStack {
+                Image(systemName: "doc.on.clipboard")
+                Text("MacGlue")
+                    .font(.headline)
+                Spacer()
+                Text("⌃-clique para \(isEnabled ? "desativar" : "ativar")")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+            }
+            .contentShape(Rectangle())
+            .onTapGesture {
+                if NSEvent.modifierFlags.contains(.control) {
+                    onControlClick()
+                }
+            }
+
             TextField("Buscar no histórico", text: $searchText)
                 .textFieldStyle(.roundedBorder)
 

@@ -10,6 +10,7 @@ Um histórico de área de transferência nativo para macOS, feito com Swift e Sw
 - Clique em um item para copiá-lo e colá-lo automaticamente no app que estava ativo.
 - Fixação e exclusão individual de itens.
 - Atalho global `⌘⇧V` para mostrar ou ocultar o histórico.
+- Control-clique no cabeçalho do histórico para desativar ou reativar a captura.
 - Janela nativa, menu da barra e animação de abertura.
 - Solicitação de permissão de Acessibilidade na primeira abertura.
 - Compatível com macOS 13 ou superior.
@@ -37,6 +38,7 @@ Ative o MacGlue e reinicie o app. O funcionamento do histórico local não depen
 3. Pressione `⌘⇧V` para mostrar ou ocultar o histórico.
 4. Clique em um item para colá-lo no aplicativo que estava ativo anteriormente.
 5. Use a lixeira para excluir um item ou o menu de contexto para fixá-lo.
+6. Faça `⌃`-clique no cabeçalho “MacGlue” para pausar ou reativar o app. Enquanto desativado, novas cópias não são registradas e o atalho global fica pausado.
 
 ## Desenvolvimento
 

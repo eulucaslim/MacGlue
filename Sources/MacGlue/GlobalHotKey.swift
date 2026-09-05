@@ -12,6 +12,17 @@ final class GlobalHotKey {
         register()
     }
 
+    func unregister() {
+        if let hotKeyRef {
+            UnregisterEventHotKey(hotKeyRef)
+            self.hotKeyRef = nil
+        }
+        if let eventHandlerRef {
+            RemoveEventHandler(eventHandlerRef)
+            self.eventHandlerRef = nil
+        }
+    }
+
     private func register() {
         let hotKeyID = EventHotKeyID(
             signature: OSType(0x4D_47_4C_55),
