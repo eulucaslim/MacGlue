@@ -1,5 +1,8 @@
 .build/
+.swiftpm/
 build/
 DerivedData/
+dist/
+.maestri/
 *.xcuserstate
 .DS_Store
