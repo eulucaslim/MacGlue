@@ -1,0 +1,221 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		000000000000000000000006 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000107 /* Assets.xcassets */; };
+		000000000000000000000001 /* ClipboardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000101 /* ClipboardItem.swift */; };
+		000000000000000000000002 /* ClipboardMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000102 /* ClipboardMonitor.swift */; };
+		000000000000000000000003 /* ClipboardStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000103 /* ClipboardStore.swift */; };
+		000000000000000000000004 /* MacGlueApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000104 /* MacGlueApp.swift */; };
+		000000000000000000000005 /* GlobalHotKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000106 /* GlobalHotKey.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		000000000000000000000107 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		000000000000000000000100 /* MacGlue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacGlue.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		000000000000000000000101 /* ClipboardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardItem.swift; sourceTree = "<group>"; };
+		000000000000000000000102 /* ClipboardMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardMonitor.swift; sourceTree = "<group>"; };
+		000000000000000000000103 /* ClipboardStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardStore.swift; sourceTree = "<group>"; };
+		000000000000000000000104 /* MacGlueApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacGlueApp.swift; sourceTree = "<group>"; };
+		000000000000000000000105 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		000000000000000000000106 /* GlobalHotKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalHotKey.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		000000000000000000000200 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		000000000000000000000300 = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000301 /* MacGlue */,
+				000000000000000000000302 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		000000000000000000000301 /* MacGlue */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000101 /* ClipboardItem.swift */,
+				000000000000000000000102 /* ClipboardMonitor.swift */,
+				000000000000000000000103 /* ClipboardStore.swift */,
+				000000000000000000000104 /* MacGlueApp.swift */,
+				000000000000000000000105 /* Info.plist */,
+				000000000000000000000106 /* GlobalHotKey.swift */,
+				000000000000000000000107 /* Assets.xcassets */,
+			);
+			path = Sources/MacGlue;
+			sourceTree = "<group>";
+		};
+		000000000000000000000302 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000100 /* MacGlue.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		000000000000000000000400 /* MacGlue */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 000000000000000000000501 /* Build configuration list for PBXNativeTarget "MacGlue" */;
+			buildPhases = (
+				000000000000000000000201 /* Sources */,
+				000000000000000000000200 /* Frameworks */,
+				000000000000000000000202 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MacGlue;
+			productName = MacGlue;
+			productReference = 000000000000000000000100 /* MacGlue.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		000000000000000000000600 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 2600;
+				LastUpgradeCheck = 2600;
+			};
+			buildConfigurationList = 000000000000000000000502 /* Build configuration list for PBXProject "MacGlue" */;
+			compatibilityVersion = "Xcode  Vernacular";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 000000000000000000000300;
+			productRefGroup = 000000000000000000000302 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				000000000000000000000400 /* MacGlue */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		000000000000000000000201 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				000000000000000000000001 /* ClipboardItem.swift in Sources */,
+				000000000000000000000002 /* ClipboardMonitor.swift in Sources */,
+				000000000000000000000003 /* ClipboardStore.swift in Sources */,
+				000000000000000000000004 /* MacGlueApp.swift in Sources */,
+				000000000000000000000005 /* GlobalHotKey.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXResourcesBuildPhase section */
+		000000000000000000000202 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				000000000000000000000006 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		000000000000000000000700 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_APP_INTENTS_METADATA_GENERATION = NO;
+				INFOPLIST_FILE = Sources/MacGlue/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.macglue.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		000000000000000000000701 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_APP_INTENTS_METADATA_GENERATION = NO;
+				INFOPLIST_FILE = Sources/MacGlue/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.macglue.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		000000000000000000000702 /* Project Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		000000000000000000000703 /* Project Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		000000000000000000000501 /* Build configuration list for PBXNativeTarget "MacGlue" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				000000000000000000000700 /* Debug */,
+				000000000000000000000701 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		000000000000000000000502 /* Build configuration list for PBXProject "MacGlue" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				000000000000000000000702 /* Project Debug */,
+				000000000000000000000703 /* Project Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 000000000000000000000600 /* Project object */;
+}
